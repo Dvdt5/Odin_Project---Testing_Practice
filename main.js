@@ -58,3 +58,15 @@ export function caesarCipher (word, key) {
 
     return returnArr.join("");
 }
+
+export function analyzeArray(array) {
+
+    let sortedArr = array.sort((a, b) => a - b);
+
+    return {
+        average :  Math.round(sortedArr.reduce((pre, cur) => pre + cur, 0) / sortedArr.length),
+        min : sortedArr[0],
+        max : sortedArr.slice(-1)[0],
+        length : sortedArr.length
+    };
+}

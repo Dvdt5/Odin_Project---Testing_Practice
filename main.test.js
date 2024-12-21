@@ -1,4 +1,4 @@
-import { capitalize , reverseString , calculator , caesarCipher} from "./main";
+import { capitalize , reverseString , calculator , caesarCipher , analyzeArray} from "./main";
 
 
 test('capitalize', () => {
@@ -60,4 +60,15 @@ test('caesarCipher', ()=> {
 
     // Mixed With Specail char and higher key
     expect(caesarCipher("HeLlO WorLd!", 4)).toBe("LiPpS AsvPh!");
+});
+
+test('analyzeArray', ()=>{
+
+    expect(analyzeArray([1,8,3,4,2,6])).toStrictEqual({
+        average: 4,
+        min: 1,
+        max: 8,
+        length: 6
+    });
+
 });
