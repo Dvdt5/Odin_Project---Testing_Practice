@@ -13,3 +13,4 @@ export function capitalize(word){
     tempArr.unshift(firstLetter);
     return tempArr.join("");
 }
+
